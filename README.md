@@ -2,9 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
 
+This example uses code from a tutorial by Lukas Marx (https://malcoded.com/posts/angular-backend-express)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+To test the back-end portion of the server run `ng build` first. Then run `node server` to check that the requests are working on `http://localhost:3000/`.
 
 ## Code scaffolding
 

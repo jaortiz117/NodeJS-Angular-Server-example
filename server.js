@@ -17,12 +17,13 @@ app.use(bodyParser.json());
 //get all
 app.route('/api/data').get((req, res) => {
   res.send({
-      data: [{ name: 'lilly' }, { name: 'lucy' }]
+      data: [{ name: 'lilly' }, { name: 'lucy' }]//for this example we are simply creating new data
     });
 });
 //get name
 app.route('/api/data/:name').get((req, res) => {
   const requestedName = req.params['name'];
+  //for the purpose of this test we only return the name in a new object
   res.send({ name: requestedName });
 });
 //post
@@ -45,4 +46,4 @@ app.get('/*', (req,res) => res.sendFile(path.join(__dirname)));
 //server creation
 const server = http.createServer(app);
 
-server.listen(port, ()=> console.log('Running...'));
+server.listen(port, ()=> console.log('Running on port 3000...'));
