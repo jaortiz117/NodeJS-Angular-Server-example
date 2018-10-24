@@ -13,7 +13,7 @@ import { DataService } from 'src/app/data.service';
     BrowserModule,
     HttpClient
   ],
-  providers: [DatService],//provide our service here
+  providers: [DataService],//provide our service here
   bootstrap: [AppComponent]
 })
 export class AppModule { }
