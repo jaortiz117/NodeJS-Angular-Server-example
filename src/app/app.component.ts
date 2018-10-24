@@ -7,14 +7,15 @@ import { DataService } from 'src/app/data.service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
   constructor( private dataService:DataService){}
 
-  ngOnInit(): void {
+  getAll(){
     this.dataService.getAllCats().subscribe( result => {
       console.log("Received Response: " + result);
     });
+  }
 
+  getTest(){
     this.dataService.getCat("testerson").subscribe( result => {
       console.log("Received Response: " + result.name);
     });
