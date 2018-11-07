@@ -16,9 +16,10 @@ app.use(bodyParser.json());
 //methods for REST
 //get all
 app.route('/api/data').get((req, res) => {
-  res.send({
-      data: [{ name: 'lilly' }, { name: 'lucy' }]//for this example we are simply creating new data
-    });
+  res.send([
+    { name: 'lilly' },
+    { name: 'lucy' }]//for this example we are simply creating new data
+    );
 });
 //get name
 app.route('/api/data/:name').get((req, res) => {

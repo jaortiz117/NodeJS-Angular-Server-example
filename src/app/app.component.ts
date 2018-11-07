@@ -7,11 +7,12 @@ import { DataService } from 'src/app/data.service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor( private dataService:DataService){}
+  constructor( private dataService :DataService){}
 
   getAll(){
     this.dataService.getAllCats().subscribe( result => {
       console.log("Received Response: " + result);
+      console.log(result[0].name);
     });
   }
 
